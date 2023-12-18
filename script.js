@@ -1,23 +1,22 @@
 function letterMad(str)
 {
-	if(!str)return [];
-	
     let ans={};
+    
     for(let i=0;i<str.length;i++){
-        ans[str.charAt(i)]=[];
-    }
-   
+        if(ans[str.charAt(i)]){
+            ans[str.charAt(i)].push(i);
+        }
 
-    //we have created the map..
-
-    for(let i=0;i<str.length;i++)
-    {
-        ans[str.charAt(i)].push(i);
+        else{
+            ans[str.charAt(i)]=[i];
+        }
     }
+
+    console.log(ans);
 
     return ans;
 }
 
 
 let str=prompt("Enter Your String");
-alert(letterMad(str).toString());
+alert(letterMad(str));
