@@ -1,6 +1,6 @@
 function letterMad(str)
 {
-    let ans={};
+    const ans={};
     
     for(let i=0;i<str.length;i++){
         if(ans[str.charAt(i)]){
@@ -11,12 +11,8 @@ function letterMad(str)
             ans[str.charAt(i)]=[i];
         }
     }
-
+ 
     console.log(ans);
 
     return ans;
 }
-
-
-let str=prompt("Enter Your String");
-alert(letterMad(str));
